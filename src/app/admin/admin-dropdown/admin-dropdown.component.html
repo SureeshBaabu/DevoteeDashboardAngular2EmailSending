@@ -1,0 +1,47 @@
+<div class="container">
+  <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
+      <div class="col-md-6 form-line">
+            <div class="form-group">
+                <div class="form-group input-field col s8">
+                <label for="exampleInputUsername">Name</label>
+              <input type="text" class="form-control"  name="username" formControlName="username" placeholder=" Enter Name">
+              </div>
+            </div>
+            <div class="form-group">
+                <div class="form-group input-field col s8">
+              <label for="exampleInputEmail">Email Address</label>
+              <input type="email" class="form-control"  name="email" formControlName="email" placeholder=" Enter Email id">
+            </div>	
+            </div>
+            <div class="form-group">
+              <div class="form-group input-field col s8">
+            <label for="exampleInputPhone">Phone No</label>
+            <input type="text" class="form-control"  name="phoneno" formControlName="phoneno" placeholder=" Enter Phone Number">
+          </div>	
+          </div>
+            <!-- <div class="form-group">
+                <div class="form-group input-field col s8"  [ngClass]="setClassSellerType()">
+              <label for="telephone">Gender</label>
+              <select class="custom-select">
+                <option selected>Choose...</option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+              </select>
+            </div>
+            </div> -->
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <div class="form-group input-field col s8">
+                <label for ="description"> Message</label>
+                 <textarea  class="form-control"  name="message" formControlName="message" placeholder="Enter Your Message"></textarea>
+            </div>
+            </div>
+            <div>
+
+                <button type="button" class="btn btn-primary"  type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
+            </div>
+            
+      </div>
+  </form>
+</div>

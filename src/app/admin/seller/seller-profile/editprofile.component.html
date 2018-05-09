@@ -1,0 +1,131 @@
+
+<!-- Seller Type -->
+<div *ngIf="isEditing" >
+    <!-- isEditing -->
+    <form [formGroup]="updateSellerTypeForm"  (ngSubmit)="saveProfile()">
+        <div class="form-group input-field col s8"   [ngClass]="setClassSellerType()">
+            <input class="form-control" type="text" name="sellertype" value="{{ sellerprofile.sellertype}}" formControlName="sellertype" placeholder="">
+        </div>
+    </form>
+    <button class="btn btn-primary" (click)="cancelEditing()">Cancel</button>  
+    <button class="btn btn-primary">Save</button>
+</div>
+
+<!-- Seller Type Before Editing or After Editng -->
+<div *ngIf="!isEditing">
+
+        <b>Seller Type : </b> {{sellerprofile.sellertype}} 
+        <button class="btn btn-primary" (click)="enableEditing()">Edit</button>
+</div>
+
+ <!-- First Name -->
+ <div *ngIf="isFNEditing" >
+        <!-- isEditing -->
+        <form>
+            <div class="form-group input-field col s8"   [ngClass]="setClassFirstName()">
+                <input class="form-control" type="text" name="firstname" value="{{ sellerprofile.firstname}}" formControlName="firstname" placeholder="Seller First Name">
+            </div>
+        </form>
+        <button class="btn btn-primary" (click)="cancelFNEditing()">Cancel</button>
+        <button class="btn btn-primary" (click)="saveFNProfile()">Save</button>
+</div>
+    
+<!-- Seller First Name Before Editing or After Ediitng -->
+<div *ngIf="!isFNEditing">
+
+        <b>First Name : </b> {{sellerprofile.firstname}}
+        <button class="btn btn-primary" (click)="enableFNEditing()">Edit</button>
+</div>
+
+ <!-- Last Name -->
+ <div *ngIf="isLNEditing">
+        <!-- isEditing -->
+        <form>
+            <div class="form-group input-field col s8"   [ngClass]="setClassLastName()">
+                <input class="form-control" type="text" name="lastname" value="{{ sellerprofile.lastname}}" formControlName="lastname" placeholder="Seller Last Name">
+            </div>
+        </form>
+        <button class="btn btn-primary" (click)="cancelLNEditing()">Cancel</button>
+        <button class="btn btn-primary" (click)="saveLNProfile()">Save</button>
+</div>
+
+<!-- Seller Last Name Before Editing or After Ediitng -->
+<div *ngIf="!isLNEditing">
+
+        <b>Last Name : </b> {{sellerprofile.lastname}}
+        <button class="btn btn-primary" (click)="enableLNEditing()">Edit</button>
+</div>
+
+ <!-- Location -->
+ <div *ngIf="isLocEditing">
+        <!-- isEditing -->
+        <form>
+            <div class="form-group input-field col s8"   [ngClass]="setClassLocation()">
+                <input class="form-control" type="text" name="location" value="{{ sellerprofile.location}}" formControlName="location" placeholder="Seller Location">
+            </div>
+        </form>
+        <button class="btn btn-primary" (click)="cancelLocEditing()">Cancel</button>
+        <button class="btn btn-primary" (click)="saveLocProfile()">Save</button>
+</div>
+
+<!-- Seller Location Before Editing or After Ediitng -->
+<div *ngIf="!isLocEditing">
+
+        <b>Seller Location : </b> {{sellerprofile.location}}
+    
+        <button class="btn btn-primary" (click)="enableLocEditing()">Edit</button>
+</div>
+
+ <!-- Contact Number -->
+ <div *ngIf="isContactEditing">
+        <!-- isEditing -->
+        <form>
+            <div class="form-group input-field col s8"   [ngClass]="setClassContactNo()">
+                <input class="form-control" type="text" name="contactno" value="{{ sellerprofile.contactno}}" formControlName="contactno" placeholder="Contact Number">
+            </div>
+        </form>
+        <button class="btn btn-primary" (click)="cancelContactEditing()">Cancel</button>
+        <button class="btn btn-primary" (click)="saveContactProfile()">Save</button>
+</div>
+
+<!-- Seller Conatct Number Before Editing or After Ediitng -->
+<div *ngIf="!isContactEditing">
+
+        <b>Seller Contact Number : </b> {{sellerprofile.contactno}}
+        
+        <button class="btn btn-primary" (click)="enableContactEditing()">Edit</button>
+</div>
+
+<!-- Status -->
+<div *ngIf="isStatusEditing">
+        <!-- isEditing -->
+        <form>
+            <div class="form-group input-field col s8"   [ngClass]="setClassStatus()">
+                <input class="form-control" type="text" name="status" value="{{ sellerprofile.status}}" formControlName="status" placeholder="status">
+            </div>
+        </form>
+        <button class="btn btn-primary" (click)="cancelStatusEditing()">Cancel</button>
+        <button class="btn btn-primary" (click)="saveStatusProfile()">Save</button>
+</div>
+
+<!-- Seller Status Before Editing or After Ediitng -->
+<div *ngIf="!isStatusEditing">
+        <b>Seller Shop status: </b> {{sellerprofile.status}}
+    
+        <!-- <button class="btn btn-primary" (click)="enableStatusEditing()">Edit</button> -->
+</div>
+<!-- 
+<form class="example-form" (ngSubmit)="sendMail()">                             
+    <div class="row" id="talk">
+        <div class="col-md-12">
+              <div class="form-group">
+              <label>Full Name:</label>
+            
+              <input class="form-control lht" placeholder="Email" type="email" name="email" [(ngModel)]="mailData.to">
+              <button class="lgbtn" type="submit">Send mail</button>  
+              </div>
+        </div>
+    </div>
+</form> -->
+
+ 

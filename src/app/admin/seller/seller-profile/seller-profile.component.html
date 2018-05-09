@@ -1,0 +1,71 @@
+<div class="container body-container">
+
+    <table class="table table-hover">
+        <thead>
+          <th>
+            Seller name
+          </th>
+          <th>
+            Email
+          </th>
+        </thead>
+        <tbody>
+          <td>
+              {{ auth.currentSeller.sellername }}
+          </td>
+          <td>
+              {{ auth.currentEmail.email }}
+          </td>
+        </tbody>
+      </table>
+
+      
+
+        <!-- <app-toast [message]="toast.message"></app-toast> -->
+
+       
+          <section class="hero">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-6 col-sm-6">
+                          <div class="card border-none">
+                              <div class="card-body">
+                             
+                                  <p class="mt-4 text lead text-center">
+                                      Update Your Profile here
+                                  </p>
+                                  <div class="mt-4">
+                                      <form  [formGroup]="profileForm" (ngSubmit)="addprofile()">
+                                    
+                                        <div class="form-group input-field col s8"  [ngClass]="setClassSellerType()">
+                                            <input class="form-control" type="text" name="sellertype" formControlName="sellertype" placeholder="Seller Type">
+                                        </div>
+                                        <div class="form-group input-field col s8"  [ngClass]="setClassSellerFirstName()">
+                                          <input class="form-control" type="text" name="firstname" formControlName="firstname" placeholder="Seller First Name">
+                                      </div>
+                                        <div class="form-group input-field col s8"  [ngClass]="setClassSellerLastName()">
+                                            <input class="form-control" type="text" name="lastname" formControlName="lastname" placeholder="Seller Last Name">
+                                        </div>
+                                        
+                                        <div class="form-group input-field col s8"  [ngClass]="setClassSellerShopLocation()">
+                                            <input class="form-control" type="text" name="location" formControlName="location" placeholder="Shop Location">
+                                        </div>
+                                        <div class="form-group input-field col s8"  [ngClass]="setClassSellerShopContactNo()">
+                                            <input class="form-control" type="text" name="contactno" formControlName="contactno" placeholder="Shop Contact Number">
+                                        </div>
+                                        <div class="form-group input-field col s8"  [ngClass]="setClassShopStatus()">
+                                            <input class="form-control" type="text" name="status" formControlName="status"  placeholder="Shop Status">
+                                        </div>
+
+                                          <button class="btn btn-primary" type="submit" [disabled]="!profileForm.valid"><i class="fa fa-user-plus"></i>Save Profile</button>
+                                      </form>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>  
+      </div>
+
+

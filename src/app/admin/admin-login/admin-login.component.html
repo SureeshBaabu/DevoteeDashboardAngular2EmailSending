@@ -1,0 +1,57 @@
+
+<app-dashboard-toast [message]="toast.message"></app-dashboard-toast>
+
+
+<div class="page login-page">
+  <div class="container">
+    <div class="form-outer text-center d-flex align-items-center">
+      <div class="form-inner">
+        <div class="logo text-uppercase"><span>Bootstrap</span><strong class="text-primary">Dashboard</strong></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+       
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <div class="form-group-material"  [ngClass]="setClassEmail()">
+            <input  class="input-material" type="email" name="email" formControlName="email" placeholder="Email">
+            <!-- <label for="username" class="label-material">Username</label> -->
+          </div>
+
+          <div class="form-group-material" [ngClass]="setClassPassword()">
+            <input class="input-material" type="password" name="password" formControlName="password" placeholder="Password" >
+            <!-- <label for="password" class="label-material">Password</label> -->
+          </div>
+          <button class="btn btn-primary" type="submit"  [disabled]="!loginForm.valid"><i class="fa fa-sign-in"></i> Login</button>
+          <!-- <a id="login" routerLink="/admin/admin-home" class="btn btn-primary">Login</a> -->
+          <!-- This should be submit button but I replaced it with <a> for demo purposes-->
+        </form>
+        
+        <a routerLink="/admin-home/admin-forget" class="forgot-pass">Forgot Password?</a><small>Do not have an account? </small><a routerLink="/admin-register" class="signup">Signup</a>
+      </div>
+      <div class="copyrights text-center">
+        <p>Design by <a href="https://lakshyait.in" class="external">Lakshya IT</a></p>
+        <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="card body-container">
+  <h4 class="card-header">Login</h4>
+  <div class="card-body">
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="input-group" [ngClass]="setClassEmail()">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+        </div>
+        <input class="form-control" type="email" name="email" formControlName="email" placeholder="Email">
+      </div>
+      <div class="input-group" [ngClass]="setClassPassword()">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-key"></i></span>
+        </div>
+        <input class="form-control" type="password" name="password" formControlName="password" placeholder="Password">
+      </div>
+      <button class="btn btn-primary" type="submit" [disabled]="!loginForm.valid"><i class="fa fa-sign-in"></i> Login</button>
+      <a class="btn btn-primary pull-right" routerLink='/register'>Register</a> 
+    </form>
+  </div>
+</div> -->

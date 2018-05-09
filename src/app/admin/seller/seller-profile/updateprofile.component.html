@@ -1,0 +1,20 @@
+<div class="container"  style="margin-top:100px;">
+    <div *ngIf="sellerprofile">
+          {{sellerprofile.sellertype}}<br>
+          {{sellerprofile.firstname}}<br>
+          {{sellerprofile.lastname}}<br>
+          {{sellerprofile.location}}<br>
+          {{sellerprofile.contactno}}<br>
+          {{sellerprofile.status}}<br>
+    </div>
+  <div  *ngIf="seller">
+  
+    <div class="row">
+      <div class="col-lg-6 col-xs-6">
+  
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-sm btn-primary" (click)="enableEditing(sellerprofile)"><i class="fa fa-pencil"></i> Edit</button> 
+  </div>
+  
